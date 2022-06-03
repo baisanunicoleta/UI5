@@ -1,0 +1,32 @@
+<mvc:View controllerName="booklist.library.controller.App"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <App id="app">
+        <pages>
+				<Page title="{i18n>Books}">
+					<content>
+            <HBox>
+              <Button text="Add" press="addBook">
+                <layoutData>
+                  <FlexItemData growFactor="1" />
+                </layoutData>
+              </Button>
+              <Button text="Update" press="updateBook" >
+                <layoutData>
+                  <FlexItemData growFactor="1" />
+                </layoutData>
+              </Button>
+              <Button text="Delete" press="deleteBook" >
+                <layoutData>
+                  <FlexItemData growFactor="1" />
+                </layoutData>
+              </Button>
+            </HBox>
+
+						<mvc:XMLView viewName="booklist.library.view.View1"/>
+					</content>
+				</Page>
+		</pages>
+    </App>
+</mvc:View>

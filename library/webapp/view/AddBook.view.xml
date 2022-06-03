@@ -1,0 +1,35 @@
+<mvc:View controllerName="booklist.library.controller.AddBook"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns:f="sap.ui.layout.form"
+    xmlns="sap.m">
+
+    <App id="add">
+    <pages>
+        <Page>
+        <VBox>
+            <Button text="Back" press="onBack" />
+        </VBox>
+
+        <f:SimpleForm id="sf1" layout="ResponsiveLayout" title="Add Book">
+            <f:content>
+                <Label text="ISBN"/>
+                <Input id="isbn" type="text"/>
+
+                <Label text="Title"/>
+                <Input id="title" type="text"/>
+
+                <Label text="Author"/>
+                <Input id="author" type="text"/>
+
+            </f:content>
+        </f:SimpleForm>
+
+        <VBox>
+            <Button text="Add" press="onProcess" />
+        </VBox>
+
+        </Page>
+    </pages>
+    </App>
+</mvc:View>

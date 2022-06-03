@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="Z801_LIBRARY_BANI_SRV" xml:lang="en" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="Book" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Isbn"/>
+                </Key>
+                <Property Name="Isbn" Type="Edm.String" Nullable="false" MaxLength="17" sap:unicode="false" sap:label="ISBN" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Author" Type="Edm.String" MaxLength="50" sap:unicode="true" sap:label="Author" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Title" Type="Edm.String" MaxLength="50" sap:unicode="false" sap:label="Title" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="DatePublished" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Language" Type="Edm.String" MaxLength="2" sap:unicode="false" sap:label="Language" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="NumberOfBooks" Type="Edm.String" MaxLength="4" sap:unicode="false" sap:label="Total Books" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="NumberAvailable" Type="Edm.String" MaxLength="4" sap:unicode="false" sap:label="No. Available" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityContainer Name="Z801_LIBRARY_BANI_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="BookSet" EntityType="Z801_LIBRARY_BANI_SRV.Book" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:pageable="false" sap:content-version="1"/>
+            </EntityContainer>
+            <atom:link rel="self" href="http://s06lp1.ucc.in.tum.de:8000/sap/opu/odata/sap/Z801_LIBRARY_BANI_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="latest-version" href="http://s06lp1.ucc.in.tum.de:8000/sap/opu/odata/sap/Z801_LIBRARY_BANI_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

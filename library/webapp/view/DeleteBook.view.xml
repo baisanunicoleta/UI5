@@ -1,0 +1,28 @@
+<mvc:View controllerName="booklist.library.controller.UpdateBook"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns:f="sap.ui.layout.form"
+    xmlns="sap.m">
+
+    <App id="add">
+    <pages>
+        <Page>
+        <VBox>
+            <Button text="Back" press="onBack" />
+        </VBox>
+
+        <f:SimpleForm id="sf3" layout="ResponsiveLayout" title="Delete Book">
+            <f:content>
+                <Label text="ISBN"/>
+                <Input id="isbn" type="text"/>
+            </f:content>
+        </f:SimpleForm>
+
+        <VBox>
+            <Button text="Delete" press="onProcess" />
+        </VBox>
+
+        </Page>
+    </pages>
+    </App>
+</mvc:View>

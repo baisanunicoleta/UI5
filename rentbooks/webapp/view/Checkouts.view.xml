@@ -1,0 +1,55 @@
+<mvc:View controllerName="books.rentbooks.controller.Checkouts"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Table id="idBooksTable"
+		items="{
+			path: '/BookSet'
+		}"
+		growing="true"
+		growingThreshold="10">
+	
+		<columns>
+			<Column>
+				<Text text="Title" />
+			</Column>
+			<Column>
+				<Text text="Author" />
+			</Column>
+			<Column>
+				<Text text="Published on" />
+			</Column>
+			<Column>
+				<Text text="Language" />
+			</Column>
+         <Column>
+				<Text text="Available books" />
+			</Column>
+            <Column>
+                <Text text="Check Out" />
+            </Column>
+		</columns>
+		<items>
+			<ColumnListItem>
+				<cells>
+					<ObjectIdentifier
+						title="{Title}"
+						text="{Isbn}"
+                        id="isbn"/>
+					<Text text="{Author}" />
+					<Text text="{ 
+							path: 'DatePublished',
+							type: 'sap.ui.model.type.Date'
+               			}" 
+					/>
+					<Text text="{Language}" />
+					<Text text="{= parseInt(${NumberAvailable}) }" />
+                    <Button text="Check Out" press="checkOut" >
+                        <layoutData>
+                        <FlexItemData growFactor="1" />
+                        </layoutData>
+                    </Button>
+				</cells>
+			</ColumnListItem>
+		</items>
+	</Table>
+</mvc:View>
